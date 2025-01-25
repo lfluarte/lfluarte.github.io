@@ -8,10 +8,12 @@ participant Firewall
 Attacker->>+Botnet: Activate Malware
 Botnet->>WebServer: Request Packets
 WebServer->>Firewall: Waiting For Confirmation
+rect rgb(66, 66, 245)
 Firewall->>Botnet: Waiting for Final Handshake
 Botnet-->>Firewall: No Answer
 Firewall-->Botnet: Analyses IP address, and the traffic
-Firewall->>Botnet: Blocks IP 
+Firewall->>Botnet: Blocks IP
+end 
 Botnet->>WebServer: Requests more packets
 Attacker->>WebServer: Requests Packets
 WebServer->>Firewall: Requests waiting for confirmation
